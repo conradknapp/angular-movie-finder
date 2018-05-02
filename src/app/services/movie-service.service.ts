@@ -32,4 +32,10 @@ export class MovieServiceService {
     return this._jsonp.get(`${this.SEARCH_MOVIES_ENDPOINT}${searchStr}&sort_by=popularity.desc&api_key=${this.API_KEY}`)
     .map(res => res.json());
   }
+
+  getMovie(id: string) {
+    return this._jsonp
+      .get(`https://api.themoviedb.org/3/movie/${id}?callback=JSONP_CALLBACK&api_key=${this.API_KEY}`)
+      .map(res => res.json()); 
+  }
 }

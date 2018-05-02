@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieServiceService } from '../../services/movie-service.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
